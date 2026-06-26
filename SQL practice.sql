@@ -102,3 +102,22 @@ insert into student(stud_id, cid, tid, sname, email, phone, dob, gender, address
 (10, 10, 10, 'Kavita', 'kavita2004@gmail.com', '9325538486', '2004-07-22', 'Female', 'Sangli');
 
 select * from student;
+
+	-- QUESTIONS
+--     1. uodate the fees of python programming course to 60000
+update course set fees="60000" where cname="Python";
+
+-- 2. update the phone number of student aarti
+update student set phone="1234987695" where sname="aarti";
+
+-- 3. update faculty qualification where experience is 5
+update teacher set qualification="p.hd" where experience=5;
+
+-- 4. add new column address to the student table
+alter table student add column XYZ varchar(20);
+
+-- 5. rename the column phone to contactNumber in faculty
+alter table teacher rename column phone to contactNumber; 
+
+-- 6. drop the dob column from the student table
+alter table student drop dob; 
