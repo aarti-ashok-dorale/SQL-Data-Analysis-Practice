@@ -69,10 +69,16 @@ select * from books where author = 'dennis ritchie';
 -- 3. find all students enrolled in a particular course
 select * from students where course = 'bca';
 
--- 4. count total books available
+-- 4. count total books available (aggregate function)
+select count( book_id) from books;
 
 
 -- 5. list books sorted alphabetically
+select * from books order by title; # by default ascending
+select * from books order by title desc;
+select * from books order by title asc;
+
+select * from books order by title desc, author asc;
 
 -- 6. display books with available copies greater than 5
 
@@ -85,7 +91,22 @@ select * from students where student_name like 'a%';
 select * from issue;
 
 -- 9. count total students in the library system
+select count(student_id) from students;
 
 -- 10. display books belonging to a specific category
 
-select * from books where category = 'computer';
+select * from books where category = 'computer'; 
+
+# 11.sum()
+select sum(available_copies) from books;
+
+# 12.average()
+select avg(available_copies) from books;
+
+# 13.min()
+select min(available_copies) from books;
+
+# 14.max()	
+select max(available_copies) from books;
+
+# 
