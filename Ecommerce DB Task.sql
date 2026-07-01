@@ -93,7 +93,7 @@ select * from product where not cat_id = 3;
 select * from product where price between 500 and 30000;
 
 -- in operator
-select * from category where cat_id in (1,2);
+select * from category where cat_id in (1,2); 
 
 -- like operator
 select * from customer where cust_name like 'P%';
@@ -101,5 +101,17 @@ select * from customer where cust_name like 'P%';
 -- is operator
 select * from customer where phone is not null;
 
+# is null
+
+update orders1 set  qty =null where or_id = 1005;
+select * from orders1;
+
+select * from orders1 where qty is null;
+ 
+select * from orders1 where qty is not null;
+
+select qty, count(or_id) from orders1 group by qty;
+
+-- select dept_id, sum(salary) as total_salary from employees group by dept_id;
 
 
